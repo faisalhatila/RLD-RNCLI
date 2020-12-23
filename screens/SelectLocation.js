@@ -11,7 +11,7 @@ import {BoldtText, LightText} from '../components/UI/Text';
 import SelectLocationCover from '../assets/images/SelectLocationCover2.png';
 import Check from '../assets/images/Check.png';
 import LinearGradient from 'react-native-linear-gradient';
-const SelectLocation = () => {
+const SelectLocation = (props) => {
   return (
     <View style={{flex: 1}}>
       <View style={{flex: 4, justifyContent: 'flex-end'}}>
@@ -59,7 +59,8 @@ const SelectLocation = () => {
             borderRadius: 20,
             overflow: 'hidden',
           }}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate('HomeScreen')}>
             <LinearGradient
               start={{x: 0, y: 0}}
               end={{x: 1, y: 0}}

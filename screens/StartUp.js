@@ -205,17 +205,6 @@ const StartUp = (props) => {
             </View>
           );
         })}
-      {/* <View>
-        <View>
-          <Text style={{color: '#000'}}>Comp 1</Text>
-        </View>
-        <View>
-          <Text style={{color: '#000'}}>Comp 2</Text>
-        </View>
-        <View>
-          <Text style={{color: '#000'}}>Comp 3</Text>
-        </View>
-      </View> */}
     </View>
   );
 };

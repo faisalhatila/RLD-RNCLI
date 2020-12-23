@@ -16,12 +16,18 @@ import SelectLanguageScreen, {
 import SelectLocationScreen, {
   screenOptions as selectLocationScreenOptions,
 } from '../screens/SelectLocation';
+import HomeScreen, {screenOptions as homeScreenOptions} from '../screens/Home';
 
 const StoreStackNavigator = createStackNavigator();
 
 export const StoreNavigator = () => {
   return (
     <StoreStackNavigator.Navigator>
+      <StoreStackNavigator.Screen
+        name="Home"
+        component={HomeScreen}
+        // options={homeScreenOptions}
+      />
       <StoreStackNavigator.Screen
         name="Startup"
         component={Startup}
@@ -47,6 +53,11 @@ export const StoreNavigator = () => {
         component={SelectLocationScreen}
         options={selectLocationScreenOptions}
       />
+      {/* <StoreStackNavigator.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={homeScreenOptions}
+      /> */}
     </StoreStackNavigator.Navigator>
   );
 };
