@@ -6,6 +6,8 @@ import {
   SafeAreaView,
   ScrollView,
   View,
+  TouchableNativeFeedback,
+  TouchableOpacity,
 } from 'react-native';
 import Input from '../components/UI/Input';
 import {BoldtText, LightText} from '../components/UI/Text';
@@ -17,8 +19,9 @@ import Lingeries from '../assets/images/Lingeries.png';
 import HomeCover1 from '../assets/images/HomeCover1.png';
 import HomeCover2 from '../assets/images/HomeCover2.png';
 import ProductCard from '../components/screens/ProductCard';
+// import {TouchableNativeFeedback} from 'react-native-gesture-handler';
 
-const Home = () => {
+const Home = (props) => {
   const renderItem = ({item}) => {
     return <ProductCard />;
   };
@@ -76,6 +79,10 @@ const Home = () => {
       id: 10,
     },
   ];
+  const gotoDetail = () => {
+    // console.log(props);
+    props.navigation.navigate('ProductDetails');
+  };
   return (
     <View style={{flex: 1}}>
       <View
@@ -198,7 +205,18 @@ const Home = () => {
             /> */}
             {/* </SafeAreaView> */}
             {[...Array(10)].map((card, i) => {
-              return <ProductCard key={i} />;
+              return (
+                // <TouchableOpacity
+                //   onPress={() => props.navigation.navigate('ProductDetails')}
+                //   key={i}
+                //   style={{
+                //     width: '50%',
+                //     // backgroundColor: '#000',
+                //     // borderWidth: 1,
+                //   }}>
+                <ProductCard gotoDetail={gotoDetail} key={i} />
+                // </TouchableOpacity>
+              );
             })}
           </View>
         </ScrollView>

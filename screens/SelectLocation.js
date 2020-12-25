@@ -59,8 +59,7 @@ const SelectLocation = (props) => {
             borderRadius: 20,
             overflow: 'hidden',
           }}>
-          <TouchableOpacity
-            onPress={() => props.navigation.navigate('HomeScreen')}>
+          <TouchableOpacity onPress={() => props.navigation.navigate('Home')}>
             <LinearGradient
               start={{x: 0, y: 0}}
               end={{x: 1, y: 0}}

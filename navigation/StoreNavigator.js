@@ -17,17 +17,25 @@ import SelectLocationScreen, {
   screenOptions as selectLocationScreenOptions,
 } from '../screens/SelectLocation';
 import HomeScreen, {screenOptions as homeScreenOptions} from '../screens/Home';
+import ProductDetailsScreen, {
+  screenOptions as productDetailsScreenOptions,
+} from '../screens/ProductDetails';
 
 const StoreStackNavigator = createStackNavigator();
 
 export const StoreNavigator = () => {
   return (
     <StoreStackNavigator.Navigator>
-      <StoreStackNavigator.Screen
+      {/* <StoreStackNavigator.Screen
         name="Home"
         component={HomeScreen}
         // options={homeScreenOptions}
       />
+      <StoreStackNavigator.Screen
+        name="ProductDetails"
+        component={ProductDetailsScreen}
+        options={productDetailsScreenOptions}
+      /> */}
       <StoreStackNavigator.Screen
         name="Startup"
         component={Startup}
@@ -53,11 +61,16 @@ export const StoreNavigator = () => {
         component={SelectLocationScreen}
         options={selectLocationScreenOptions}
       />
-      {/* <StoreStackNavigator.Screen
-        name="HomeScreen"
+      <StoreStackNavigator.Screen
+        name="Home"
         component={HomeScreen}
-        options={homeScreenOptions}
-      /> */}
+        // options={homeScreenOptions}
+      />
+      <StoreStackNavigator.Screen
+        name="ProductDetails"
+        component={ProductDetailsScreen}
+        options={productDetailsScreenOptions}
+      />
     </StoreStackNavigator.Navigator>
   );
 };
